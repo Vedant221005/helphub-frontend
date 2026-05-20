@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 18.13.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_BASE_URL": "https://helphub-backend-zrnl.onrender.com/api",
+        "EXPO_PUBLIC_SOCKET_URL": "https://helphub-backend-zrnl.onrender.com"
+      }
+    },
+
+    "production": {
+      "autoIncrement": true
+    }
+  },
+
+  "submit": {
+    "production": {}
+  }
+}

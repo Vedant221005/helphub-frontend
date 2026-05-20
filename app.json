@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "HelpHub",
+    "slug": "helphub",
+    "version": "1.0.0",
+    "runtimeVersion": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+
+    "icon": "./src/assets/icons/app-icon.png",
+
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+
+    "updates": {
+      "enabled": false,
+      "checkAutomatically": "never",
+      "fallbackToCacheTimeout": 0
+    },
+
+    "ios": {
+      "supportsTabletMode": false,
+      "bundleIdentifier": "com.helphub.app"
+    },
+
+    "android": {
+      "package": "com.helphub.app",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ],
+
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/icons/app-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+
+    "splash": {
+      "image": "./src/assets/icons/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+
+    "web": {},
+
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermissions": "Allow HelpHub to access your location for finding nearby helpers."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow HelpHub to access your photos for profile pictures.",
+          "cameraPermission": "Allow HelpHub to access your camera to take photos."
+        }
+      ]
+    ],
+
+    "extra": {
+      "eas": {
+        "projectId": "2343107c-093c-47f9-9642-dc7e8e6b67dd"
+      }
+    }
+  }
+}
