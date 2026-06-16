@@ -25,13 +25,9 @@ import { API_BASE_URL } from '../constants/api';
 
 const BLOOD_GROUPS = ['All', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
 
-const DISTANCE_OPTIONS = ['Within 5 km', 'Within 10 km', 'Within 25 km', 'Any distance'];
-
 export default function DonorsScreen({ navigation, setIsLoggedIn }: any) {
   const [searchText, setSearchText] = useState('');
   const [selectedBloodGroup, setSelectedBloodGroup] = useState('All');
-  const [selectedDistance, setSelectedDistance] = useState('Within 5 km');
-  const [showDistanceDropdown, setShowDistanceDropdown] = useState(false);
   const [donors, setDonors] = useState<any[]>([]);
   const [filteredDonors, setFilteredDonors] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -377,25 +373,8 @@ export default function DonorsScreen({ navigation, setIsLoggedIn }: any) {
             ))}
           </ScrollView>
 
-          {/* Location and Online Status */}
+          {/* Online Status */}
           <View style={styles.filterRow}>
-            <TouchableOpacity
-              style={styles.distanceDropdown}
-              onPress={() => setShowDistanceDropdown(!showDistanceDropdown)}
-            >
-              <MaterialCommunityIcons
-                name="map-marker"
-                size={16}
-                color="#ffffff"
-              />
-              <Text style={styles.distanceText}>{selectedDistance}</Text>
-              <MaterialCommunityIcons
-                name="chevron-down"
-                size={16}
-                color="#ffffff"
-              />
-            </TouchableOpacity>
-
             <View style={styles.onlineStatus}>
               <View style={styles.onlineDot2} />
               <Text style={styles.onlineText}>{filteredDonors.length} Donors</Text>

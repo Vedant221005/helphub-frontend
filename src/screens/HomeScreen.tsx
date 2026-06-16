@@ -1037,7 +1037,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.08)',
-    minHeight: 280,
+    height: 280,
   },
   mapPlaceholderText: {
     color: '#666666',

@@ -31,6 +31,7 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.RECORD_AUDIO"
       ],
+      "googleMapsApiKey": "AIzaSyDJXaXFuyw5OETaXjrYmeLT-guvr45eSTU",
 
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/icons/app-icon.png",

@@ -190,7 +190,7 @@ export default function LiveMap({
               color="#ffffff"
             />
           </View>
-          <Text style={styles.statText}>{donors.length} donors</Text>
+          <Text style={styles.statText}>{donors.filter(d => d.latitude && d.longitude).length} donors</Text>
         </View>
       </View>
     </View>
